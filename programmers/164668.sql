@@ -8,9 +8,9 @@ FROM
          WRITER_ID,
          SUM(PRICE) as TOTAL_SALES
      FROM
-         USED_GOODS_BOARD
+        USED_GOODS_BOARD
      WHERE
-             STATUS = 'DONE'
+        STATUS = 'DONE'
      GROUP BY WRITER_ID) as F
 WHERE
         F.TOTAL_SALES >= 700000
